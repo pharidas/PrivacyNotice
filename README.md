@@ -1,1 +1,1 @@
-# ProvacyNotice
+# PrivacyNotice
