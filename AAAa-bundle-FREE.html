@@ -1,0 +1,29 @@
+<!-- OneTrust Privacy Notice Bundle start -->
+
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="filter1Dropdown"></select>
+<select id="filter2Dropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
+
+<script src="https://freeds4e86.blob.core.windows.net/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1mcmVlLm9uZXRydXN0LmNvbS9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
+    bundleUrl="https://freeds4e86.blob.core.windows.net/c96a7521-6283-4f6b-94c4-a21a14c70613/notice-bundles/49c3691c-707f-41fb-8464-d4820b6bf07a.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["filter1Dropdown", "filter2Dropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
