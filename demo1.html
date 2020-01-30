@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    
+function getVendorConsents(){
+    __cmp('getVendorConsents', null, function(result) {
+        document.getElementById('VendorConsents').innerHTML = JSON.stringify(result, null, 2);
+    });
+}
+function getConsentData(){
+   __cmp('getConsentData', null, function(result) {
+        document.getElementById('ConsentData').innerHTML = JSON.stringify(result, null, 2);
+    });
+}
+function getPingRequest(){
+   __cmp('ping', null, function(result) {
+        document.getElementById('pings').innerHTML = JSON.stringify(result, null, 2);
+    });
+}
+
+function decodeConsentString(){
+    var data = document.getElementById("consentString").value;
+    var res = new consentString.ConsentString(data);
+    document.getElementById("DecodedConsentData").innerHTML =JSON.stringify(res);
+
+}
+</script>
+
+</head>
+
+<body>
+<!-- OneTrust Privacy Notice start -->
+
+<!-- Container in which the privacy notice will be rendered -->
+<div id="otnotice-7325fa58-30a4-4cfb-9f63-b5fd2adc4608" class="otnotice"></div>
+
+<script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vYXBwLWRzLnFhLm90ZGV2Lm9yZy9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    // To ensure external settings are loaded, use the Initialized promise:
+    OneTrust.NoticeApi.Initialized.then(function() {
+        OneTrust.NoticeApi.LoadNotices(["https://appds7c6e.blob.core.windows.net/ad5aaa94-af12-41d3-83fe-d1a92ba213bd/privacy-notices/7325fa58-30a4-4cfb-9f63-b5fd2adc4608.json"]);
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
+
+    <!-- OneTrust Cookies Consent Notice start -->
+
+<script src="https://cookie2.blob.core.windows.net/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="d8b6eec9-9df7-448c-97cd-a153c6127411"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<script>
+<!-- OneTrust Cookies Consent Notice end -->
+    
+ <!-- OneTrust Cookies Settings button start -->
+<button id="ot-sdk-btn" class="ot-sdk-show-settings"> Cookie Settings</button>
+<!-- OneTrust Cookies Settings button end -->
+    <br />
+    <br />
+    <br />
+    <a href="./Demo1.html">Go to demo page</a><br />
+
+<b>Consent String : </b><input type="text" id="consentString" onchange="decodeConsentString()"> <br />
+<b>Decoded String : </b> <div id="DecodedConsentData"></div>
+      <a href="#" onclick="getConsentData()">getConsentData</a>
+      <a href="#" onclick="getVendorConsents()">getVendorConsents</a>
+      <a href="#" onclick="getPingRequest()">getPingRequest</a> <br /><br />
+      <b>Consent Data :</b>
+      <div id="ConsentData"></div>
+      <b>Consent Vendor Data :</b>
+      <div id="VendorConsents"></div>
+      <b>Ping :</b>
+      <div id="pings"></div>
+
+
+    <div id="ot-sdk-cookie-policy"></div>
+
+
+</body>
+
+</html>
