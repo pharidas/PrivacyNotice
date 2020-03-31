@@ -13,17 +13,6 @@
 <div id="otnotice-bundle-container" class="otnotice"></div>
 <div id="otnotice-4c41f369-797b-47a8-a6b7-f4fef7c35f0e" class="otnotice"></div>
 
-<script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-  settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
-</script>
-
-<script type="text/javascript" charset="UTF-8">
-  // To ensure external settings are loaded, use the Initialized promise:
-  OneTrust.NoticeApi.Initialized.then(function() {
-    OneTrust.NoticeApi.LoadNotices(["https://appds7c6e.blob.core.windows.net/875e907f-3fe9-4f55-b9c4-f6fafbe2fc1c/privacy-notices/4c41f369-797b-47a8-a6b7-f4fef7c35f0e.json"]);
-  });
-</script>
-
 <!--Bundle -->
 <script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
     settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
@@ -38,5 +27,19 @@
             "otnotice-bundle-button"
         );
     });
+</script>
+
+
+<!--Notice script-->
+
+<script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+  settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+  // To ensure external settings are loaded, use the Initialized promise:
+  OneTrust.NoticeApi.Initialized.then(function() {
+    OneTrust.NoticeApi.LoadNotices(["https://appds7c6e.blob.core.windows.net/875e907f-3fe9-4f55-b9c4-f6fafbe2fc1c/privacy-notices/4c41f369-797b-47a8-a6b7-f4fef7c35f0e.json"]);
+  });
 </script>
 <!-- OneTrust Privacy Notice end -->
