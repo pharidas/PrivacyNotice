@@ -1,6 +1,16 @@
 <!-- OneTrust Privacy Notice start -->
 
 <!-- Container in which the privacy notice will be rendered -->
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="fil1Dropdown"></select>
+<select id="fil2Dropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
 <div id="otnotice-4c41f369-797b-47a8-a6b7-f4fef7c35f0e" class="otnotice"></div>
 
 <script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
@@ -14,4 +24,19 @@
   });
 </script>
 
+<!--Bundle -->
+<script src="https://appds7c6e.blob.core.windows.net/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcWEtcG9ydGFsLjF0cnVzdC5hcHAvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
+    bundleUrl="https://appds7c6e.blob.core.windows.net/875e907f-3fe9-4f55-b9c4-f6fafbe2fc1c/notice-bundles/draft/f395e5db-6f03-463e-b540-b1dc78a924d0.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["fil1Dropdown", "fil2Dropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
 <!-- OneTrust Privacy Notice end -->
